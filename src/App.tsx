@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
+import eaglesLogo from "./eaglesLogo.png"; // Import the image
 
 function App(): JSX.Element {
     return (
@@ -11,8 +12,8 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            <img src={eaglesLogo} alt="Phladelphia Eagles Logo" />
             <h1 style={{ backgroundColor: "red" }}>This is my header</h1>
-            <img src="eaglesLogo.png" alt="Phladelphia Eagles Logo"></img>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
