@@ -12,10 +12,7 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <h1 style={{ backgroundColor: "red" }}>This is my header</h1>
-            <img
-                src="./assets/eaglesLogo.png"
-                alt="Phladelphia Eagles Logo"
-            ></img>
+            <img src="eaglesLogo.png" alt="Phladelphia Eagles Logo"></img>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
