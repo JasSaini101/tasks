@@ -63,8 +63,6 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
         (messages: string): boolean => messages.at(-1) !== "?"
     );
 
-    console.log(noQuestions);
-
     const shoutMessages: string[] = noQuestions.map(
         (messages: string): string =>
             messages.at(-1) === "!" ? messages.toUpperCase() : messages
@@ -106,7 +104,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+
+    if (addends.length > 0) {
+        const addition = addends.join("+");
+        return sum.toString() + "=" + addition;
+    }
+    return sum.toString() + "=0";
 }
 
 /**
