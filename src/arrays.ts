@@ -45,12 +45,9 @@ export const removeDollars = (amounts: string[]): number[] => {
         str.at(0) === "$" ? str.slice(1) : str
     );
 
-    console.log(onlyString);
-
     const intArray: number[] = onlyString.map((str: string): number =>
         parseInt(str) ? parseInt(str) : 0
     );
-    console.log(intArray);
     return intArray;
 };
 
@@ -60,7 +57,17 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const noQuestions: string[] = messages.filter(
+        (messages: string): boolean => messages.at(-1) !== "?"
+    );
+
+    console.log(noQuestions);
+
+    const shoutMessages: string[] = noQuestions.map(
+        (messages: string): string =>
+            messages.at(-1) === "!" ? messages.toUpperCase() : messages
+    );
+    return shoutMessages;
 };
 
 /**
