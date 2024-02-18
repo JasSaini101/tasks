@@ -7,8 +7,11 @@ import { countReset } from "console";
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    if (numbers.length) {
-        const firstAndLast: number[] = [numbers.at(0), numbers.at(-1)];
+    if (numbers.length > 0) {
+        const firstAndLast: number[] = [
+            numbers.at(0) || 0,
+            numbers.at(-1) || 0
+        ];
         return firstAndLast;
     }
     const firstAndLast: number[] = [];
