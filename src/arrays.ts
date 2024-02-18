@@ -1,3 +1,5 @@
+import { countReset } from "console";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -75,7 +77,10 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const counted: string[] = words.filter(
+        (word: string): boolean => word.length < 4
+    );
+    return counted.length;
 }
 
 /**
