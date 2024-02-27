@@ -29,6 +29,12 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
+    const matching: Question[] = questions.filter(
+        (question: Question) => question.id === id
+    );
+    if (matching.length) {
+        return matching[0];
+    }
     return null;
 }
 
@@ -37,7 +43,7 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return questions.filter((question: Question) => question.id !== id);
 }
 
 /***
