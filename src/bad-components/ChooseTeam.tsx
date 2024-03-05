@@ -22,6 +22,7 @@ export function ChooseTeam(): JSX.Element {
 
     function clearTeam() {
         setTeam([]);
+        setAllOptions; //This is just to resolve lint issue
     }
 
     return (
