@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Button } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import eaglesLogo from "./eaglesLogo.png"; // Import the image
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -12,48 +13,18 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <img src={eaglesLogo} alt="Phladelphia Eagles Logo" />
-            <h1 style={{ backgroundColor: "red" }}>This is my header</h1>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                width: 100,
-                                height: 200,
-                                backgroundColor: "red"
-                            }}
-                        >
-                            <p>Task One and Two (Below)</p>
-                            <p>Hello World</p>
-                            <p>Jasnoor Saini (Jas)</p>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                width: 100,
-                                height: 300,
-                                backgroundColor: "red"
-                            }}
-                        >
-                            <p>Some of Task Three (Below)</p>
-                            <Button onClick={() => console.log("Hello World!")}>
-                                Log Hello World
-                            </Button>
-                            <ul>
-                                <li>Thing One</li>
-                                <li>Thing Two</li>
-                                <li>Atleast Three</li>
-                            </ul>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
