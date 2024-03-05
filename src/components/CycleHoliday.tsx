@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { updateExpressionWithTypeArguments } from "typescript";
 
 export function CycleHoliday(): JSX.Element {
-    const Holiday: string[] = ["🎆", "❤️", "🎃", "🍀", "🦃"];
     const [emoji, setEmoji] = useState<string>("🎆");
     //Alpha: H N S T V
     //Chron: N V S H T
