@@ -6,11 +6,11 @@ export function EditMode(): JSX.Element {
     const [isStudent, setisStudent] = useState<boolean>(true);
     const [studentName, setStudentName] = useState<string>("Your Name");
 
-    function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateEditMode() {
         setEditMode(!editMode);
     }
 
-    function updateisStudent(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateisStudent() {
         setisStudent(!isStudent);
     }
 
