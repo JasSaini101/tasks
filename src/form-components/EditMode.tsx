@@ -14,23 +14,37 @@ export function EditMode(): JSX.Element {
         setisStudent(!isStudent);
     }
 
+    function updateName(event: React.ChangeEvent<HTMLInputElement>) {
+        setStudentName(event.target.value);
+    }
+
     return (
         <div>
             <h3>Edit Mode</h3>
-            <Form.Switch
+            <Form.Check
                 type="switch"
                 id="switch-mode"
                 label="Edit?"
                 checked={editMode}
                 onChange={updateEditMode}
             />
-            <Form.Check
-                type="checkbox"
-                id="is-checkbox"
-                label="student?"
-                checked={isStudent}
-                onChange={updateisStudent}
-            />
+            {editMode && (
+                <>
+                    <Form.Check
+                        type="checkbox"
+                        id="is-checkbox"
+                        label="student?"
+                        checked={isStudent}
+                        onChange={updateisStudent}
+                    />
+                    <Form.Group controlId="studentName">
+                        <Form.Control
+                            value={studentName}
+                            onChange={updateName}
+                        />
+                    </Form.Group>
+                </>
+            )}
             <div>
                 {studentName} is {isStudent ? "a student" : "not a student"}
             </div>
