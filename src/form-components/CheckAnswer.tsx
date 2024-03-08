@@ -14,6 +14,7 @@ export function CheckAnswer({
 
     return (
         <div>
+            <h3>Check Answer</h3>
             <Form.Group controlId="checkAnswer">
                 <Form.Label>What is your answer?</Form.Label>
                 <Form.Control

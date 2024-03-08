@@ -11,6 +11,7 @@ export function GiveAttempts(): JSX.Element {
 
     return (
         <div>
+            <h3>Give Attempts</h3>
             <Form.Group controlId="attemptsLeft">
                 <Form.Label>How many attempts do you want?</Form.Label>
                 <Form.Control

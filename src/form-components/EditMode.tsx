@@ -16,6 +16,7 @@ export function EditMode(): JSX.Element {
 
     return (
         <div>
+            <h3>Edit Mode</h3>
             <Form.Switch
                 type="switch"
                 id="switch-mode"
@@ -31,9 +32,7 @@ export function EditMode(): JSX.Element {
                 onChange={updateisStudent}
             />
             <div>
-                <h3>
-                    {studentName} is {isStudent ? "a student" : "not a student"}
-                </h3>
+                {studentName} is {isStudent ? "a student" : "not a student"}
             </div>
         </div>
     );
